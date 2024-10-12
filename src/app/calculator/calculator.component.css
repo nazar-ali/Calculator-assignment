@@ -1,0 +1,111 @@
+body{
+    background-color: #3d4463;
+    height: 100vh;
+}
+.container {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  
+}
+.text {
+    background-color: #0d0033;  
+    height: 12vh;
+    border: 1px #0d0033;   
+    color:white 
+}
+.display input {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    text-align: right;
+    padding-right: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.btn, .sub-buttons {
+    width: 80px;
+    height: 60px;
+    font-size: 24px;
+}
+.btn {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: xx-large; 
+    font-weight: bold;
+}
+.sub-buttons {
+    width: 180px;
+}
+
+
+
+.buttons{
+    background-color: #0d0033;  
+    width: 450px;
+    height: 63vh;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+
+.delete-button {
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: #6778a7; 
+    border: 2px solid #6778a7;
+    padding: 0.7rem 1.1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+     font-weight: bold;
+    font-size: x-large;
+}
+
+.delete-button:focus {
+    outline: none;
+    
+}
+
+.delete-button:active{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add smaller shadow when clicked */
+    transform: scale(0.98); 
+}
+
+.warning{
+    background-color: #6778a7;
+    border: #6778a7;
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.warning:focus {
+    outline: none;
+    box-shadow: none; /* Removes Bootstrap's focus shadow */
+}
+
+.warning:active{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add smaller shadow when clicked */
+    transform: scale(0.98); 
+}
