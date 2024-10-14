@@ -11,9 +11,18 @@
 </head>
 <body>
     <div class="container">
+        <div class="calc">
+            <div>Calc</div>
+                  <div class="form-check form-switch">
+                    <div class="calc">
+                        <h2>Theme</h2>
+                        <input class="form-check-input " type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    </div>
+                  </div>                 
+        </div>
         <div class="display mb-4">
             <form action="" [formGroup] = "inputStr">
-                <input type="text" formControlName="text" class="form-control text"/>
+                <input type="text" formControlName="text" class="form-control text "/>
             </form>
         </div>
 
@@ -26,60 +35,60 @@
                     <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">8</button>
                 </div>
                 <div class="col">
-                    <button class="btn bg-white shadow">9</button>
+                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">9</button>
                 </div>
                 <div class="col">
-                    <button class=" delete-button shadow">DEL</button>
-                </div>
-            </div>
-            <div class="row g-3 mt-2">
-                <div class="col">
-                    <button class="btn bg-white shadow">6</button>
-                </div>
-                <div class="col">
-                    <button class="btn bg-white shadow">5</button>
-                </div>
-                <div class="col">
-                    <button class="btn bg-white shadow">4</button>
-                </div>
-                <div class="col">
-                    <button class="btn hover-none bg-white shadow">+</button>
+                    <button (click) ="deletLastItem()" class=" delete-button shadow">DEL</button>
                 </div>
             </div>
             <div class="row g-3 mt-2">
                 <div class="col">
-                    <button class="btn bg-white shadow">3</button>
+                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">6</button>
                 </div>
                 <div class="col">
-                    <button class="btn bg-white shadow">2</button>
+                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">5</button>
                 </div>
                 <div class="col">
-                    <button class="btn bg-white shadow">1</button>
+                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">4</button>
                 </div>
                 <div class="col">
-                    <button class="btn bg-white shadow">-</button>
-                </div>
-            </div>
-            <div class="row g-3 mt-2">
-                <div class="col">
-                    <button class="btn bg-white shadow">.</button>
-                </div>
-                <div class="col">
-                    <button class="btn bg-white shadow">0</button>
-                </div>
-                <div class="col">
-                    <button class="btn bg-white shadow">/</button>
-                </div>
-                <div class="col">
-                    <button class="btn bg-white shadow">x</button>
+                    <button (click) ="buttonClick($event.target)" class="btn hover-none bg-white shadow">+</button>
                 </div>
             </div>
             <div class="row g-3 mt-2">
                 <div class="col">
-                    <button class="sub-buttons warning  shadow">Reset</button>
+                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">3</button>
                 </div>
                 <div class="col">
-                    <button  class="sub-buttons  btn fs-1  btn-danger shadow">=</button>
+                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">2</button>
+                </div>
+                <div class="col">
+                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">1</button>
+                </div>
+                <div class="col">
+                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">-</button>
+                </div>
+            </div>
+            <div class="row g-3 mt-2">
+                <div class="col">
+                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">.</button>
+                </div>
+                <div class="col">
+                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">0</button>
+                </div>
+                <div class="col">
+                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">/</button>
+                </div>
+                <div class="col">
+                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">*</button>
+                </div>
+            </div>
+            <div class="row g-3 mt-2">
+                <div class="col">
+                    <button (click) = "clearDisplay()" class="sub-buttons warning  shadow">Reset</button>
+                </div>
+                <div class="col">
+                    <button  (click) ="calculatingValues()" class="sub-buttons  btn fs-1  btn-danger shadow">=</button>
                 </div>
             </div>
         </div>

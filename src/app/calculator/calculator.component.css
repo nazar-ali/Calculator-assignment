@@ -12,10 +12,10 @@ body{
   
 }
 .text {
-    background-color: #0d0033;  
+    font-size:xx-large;
+    font-weight: bold;
     height: 12vh;
-    border: 1px #0d0033;   
-    color:white 
+    color:white ;
 }
 .display input {
     width: 100%;
@@ -25,6 +25,11 @@ body{
     padding-right: 10px;
     border-radius: 5px;
     margin-bottom: 20px;
+    padding: 2rem;
+    margin-right: 3rem;
+    border: 1px #0d0033;   
+    background-color: #0d0033;  
+
 }
 .btn, .sub-buttons {
     width: 80px;
@@ -108,4 +113,8 @@ body{
 .warning:active{
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add smaller shadow when clicked */
     transform: scale(0.98); 
+}
+
+.calc{
+    display: flex;
 }
