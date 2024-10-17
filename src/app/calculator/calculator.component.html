@@ -1,98 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-      
+
     </style>
 </head>
+
 <body>
     <div class="container">
-        <div class="calc">
-            <div>Calc</div>
-                  <div class="form-check form-switch">
-                    <div class="calc">
-                        <h2>Theme</h2>
-                        <input class="form-check-input " type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                    </div>
-                  </div>                 
+        <div class="theme-container">
+            <span style="margin-top: 20px; font-size: x-large; font-weight: bold; ">calc</span>
+            <div class="toggle-theme">
+                <label style="margin-top: 15px;">THEME</label>
+                <div class="option-container">
+                    <span class="theme-option" id="theme1">1</span>
+                    <span class="theme-option" id="theme2">2</span>
+                    <span class="theme-option" id="theme3">3</span>
+                    <div class="form-check form-switch">
+                        <input
+                          class="form-check-input"
+                          style="width: 70px;"
+                          type="checkbox"
+                          id="check"
+                          [(ngModel)]="isChecked"
+                          (change)="toggleSwitch()"
+                        />
+                      </div>                      
+                </div>
+            </div>
         </div>
-        <div class="display mb-4">
-            <form action="" [formGroup] = "inputStr">
-                <input type="text" formControlName="text" class="form-control text "/>
+        <div class="display ">
+            <form action="" [formGroup]="inputStr">
+                <input type="text" formControlName="text" class="form-control text " />
             </form>
         </div>
+        <div class="button-container">
+            <div class="buttons">
+                <button (click)="buttonClick($event.target)">7</button>
+                <button (click)="buttonClick($event.target)">8</button>
+                <button (click)="buttonClick($event.target)">9</button>
+                <button (click)="deletLastItem()" class=" delete ">DEL</button>
+                <button (click)="buttonClick($event.target)">4</button>
+                <button (click)="buttonClick($event.target)">5</button>
+                <button (click)="buttonClick($event.target)">6</button>
+                <button (click)="buttonClick($event.target)">+</button>
+                <button (click)="buttonClick($event.target)">3</button>
+                <button (click)="buttonClick($event.target)" class="">2</button>
+                <button (click)="buttonClick($event.target)">1</button>
+                <button (click)="buttonClick($event.target)">-</button>
+                <button (click)="buttonClick($event.target)">.</button>
+                <button (click)="buttonClick($event.target)">0</button>
+                <button (click)="buttonClick($event.target)">/</button>
+                <button (click)="buttonClick($event.target)">*</button>
+            </div>
+            <div class="reset-equal-container">
+                <button class="reset-button" (click)="clearDisplay()">Reset</button>
+                <button class="equal-button" (click)="calculatingValues()">=</button>
+            </div>
 
-        <div class="buttons">
-            <div class="row g-3">
-                <div class="col">
-                    <button (click)="buttonClick($event.target)" class="btn bg-white shadow">7</button>
-                </div>
-                <div class="col">
-                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">8</button>
-                </div>
-                <div class="col">
-                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">9</button>
-                </div>
-                <div class="col">
-                    <button (click) ="deletLastItem()" class=" delete-button shadow">DEL</button>
-                </div>
-            </div>
-            <div class="row g-3 mt-2">
-                <div class="col">
-                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">6</button>
-                </div>
-                <div class="col">
-                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">5</button>
-                </div>
-                <div class="col">
-                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">4</button>
-                </div>
-                <div class="col">
-                    <button (click) ="buttonClick($event.target)" class="btn hover-none bg-white shadow">+</button>
-                </div>
-            </div>
-            <div class="row g-3 mt-2">
-                <div class="col">
-                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">3</button>
-                </div>
-                <div class="col">
-                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">2</button>
-                </div>
-                <div class="col">
-                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">1</button>
-                </div>
-                <div class="col">
-                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">-</button>
-                </div>
-            </div>
-            <div class="row g-3 mt-2">
-                <div class="col">
-                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">.</button>
-                </div>
-                <div class="col">
-                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">0</button>
-                </div>
-                <div class="col">
-                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">/</button>
-                </div>
-                <div class="col">
-                    <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">*</button>
-                </div>
-            </div>
-            <div class="row g-3 mt-2">
-                <div class="col">
-                    <button (click) = "clearDisplay()" class="sub-buttons warning  shadow">Reset</button>
-                </div>
-                <div class="col">
-                    <button  (click) ="calculatingValues()" class="sub-buttons  btn fs-1  btn-danger shadow">=</button>
-                </div>
-            </div>
         </div>
     </div>
 
 </body>
+
 </html>

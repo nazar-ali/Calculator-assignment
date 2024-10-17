@@ -1,120 +1,204 @@
-body{
+/* General Styles */
+body {
     background-color: #3d4463;
     height: 100vh;
-}
-.container {
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  }
   
-}
-.text {
-    font-size:xx-large;
+  .container {
+    max-width: 400px;
+    position: absolute;
+    left: 35%;
+    top: 15%;
+  }
+  
+  .text {
+    font-size: 2rem;
     font-weight: bold;
-    height: 12vh;
-    color:white ;
-}
-.display input {
+    color: white;
+  }
+  
+  /* Theme Switcher Styling */
+  .theme-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #FFFF;
+  }
+  
+  .toggle-theme {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .theme-option {
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  /* Calculator Screen */
+  .display input {
     width: 100%;
-    height: 60px;
+    height: 80px;
     font-size: 24px;
     text-align: right;
-    padding-right: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    padding: 2rem;
-    margin-right: 3rem;
-    border: 1px #0d0033;   
-    background-color: #0d0033;  
-
-}
-.btn, .sub-buttons {
-    width: 80px;
-    height: 60px;
-    font-size: 24px;
-}
-.btn {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: xx-large; 
-    font-weight: bold;
-}
-.sub-buttons {
-    width: 180px;
-}
-
-
-
-.buttons{
-    background-color: #0d0033;  
-    width: 450px;
-    height: 63vh;
-    padding: 35px;
+    padding-right: 8px;
     border-radius: 10px;
-}
-
-
-.delete-button {
-    display: inline-block;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    background-color: #6778a7; 
-    border: 2px solid #6778a7;
-    padding: 0.7rem 1.1rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-     font-weight: bold;
-    font-size: x-large;
-}
-
-.delete-button:focus {
-    outline: none;
-    
-}
-
-.delete-button:active{
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add smaller shadow when clicked */
-    transform: scale(0.98); 
-}
-
-.warning{
-    background-color: #6778a7;
-    border: #6778a7;
-    display: inline-block;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-    font-size: x-large;
+    background-color: #0d0033;
+    color: white;
+    border: 1px solid #0d0033;
+  }
+  
+  /* Button Styles */
+  button {
+    background-color: #FFF;
+    border: none;
     font-weight: bold;
-    text-align: center;
-}
-
-.warning:focus {
-    outline: none;
-    box-shadow: none; /* Removes Bootstrap's focus shadow */
-}
-
-.warning:active{
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add smaller shadow when clicked */
-    transform: scale(0.98); 
-}
-
-.calc{
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Delete Button Styling */
+  .delete {
+    background-color: #6778a7;
+    font-size: 1.25rem;
+    color: white;
+  }
+  
+  /* Calculator Grid Layout */
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    border-radius: 10px;
+  }
+  
+  .buttons button {
+    width: 100%;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .button-container {
+    width: 100%;
+    background-color: #0d0033;
+    border: 1px solid #0d0033;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 2rem;
+  }
+  
+  /* Container for Reset and Equal buttons */
+  .reset-equal-container {
     display: flex;
-}
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  /* Reset Button */
+  .reset-button {
+    background-color: #6778a7;
+    color: white;
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  /* Equal Button */
+  .equal-button {
+    background-color: #d03f2f;
+    color: white;
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .reset-button:active,
+  .equal-button:active {
+    transform: scale(0.98);
+  }
+  
+  .option-container {
+    margin-left: 15px;
+  }
+  
+  .checkInput {
+    width: 50px;
+  }
+  
+  /* Custome form-check style */
+  .form-check-input {
+    appearance: none; 
+    width: 60px; 
+    height: 30px;
+    background-color: #1f2a48; 
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+    border: 2px solid #1f2a48; 
+  }
+  
+  .form-check-input::before {
+    content: '';
+    width: 25px; 
+    height: 24px; 
+    background-color: red; 
+    border-radius: 50%; 
+    position: absolute;
+    top: 1px; 
+    left: 3px; 
+    transition: transform 0.3s; 
+  }
+  
+  .form-check-input:checked {
+    background-color: #2c3e50; 
+  }
+  
+  .form-check-input:checked::before {
+    transform: translateX(30px); 
+    background-color: white; 
+    left: 10px; 
+    
+  }
+  
+  .form-check-input:checked::after {
+    content: ''; 
+    width: 0px; 
+    height: 0px; 
+    background-color: white; 
+    position: absolute;
+    top: 9px; 
+    left: 46px; 
+    border-radius: 50%; 
+    transition: opacity 0.3s; 
+  }
+  
+  .form-check-input:not(:checked)::after {
+    opacity: 0; 
+  }
+  
+  .custom-toggle-icon {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .checked {
+    color: red; 
+  }
